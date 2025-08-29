@@ -11,13 +11,12 @@ Creating Two Vlans In a Network and each have Two Laptop In Them
 Both VLANs connect to a switch → then to the router.
 
 2. Assign VLANs on Switch
-On the switch:
-Switch> enable
+On the switch:```
+`Switch> enable
 Switch# configure terminal
 Switch(config)# vlan 10
 Switch(config-vlan)# name Sales
-Switch(config-vlan)# exit```
-
+Switch(config-vlan)# exit
 Switch(config)# vlan 20
 Switch(config-vlan)# name HR
 Switch(config-vlan)# exit```
