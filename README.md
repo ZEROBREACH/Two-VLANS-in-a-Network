@@ -25,9 +25,9 @@ Switch(config-vlan)# exit```
 
 # 3. Assign Ports to VLANs
 
-Laptops 1 & 2 → VLAN 10 (say ports FastEthernet 0/1 and 0/2)
+* Laptops 1 & 2 → VLAN 10 (say ports FastEthernet 0/1 and 0/2)
 
-Laptops 3 & 4 → VLAN 20 (say ports FastEthernet 0/3 and 0/4)
+* Laptops 3 & 4 → VLAN 20 (say ports FastEthernet 0/3 and 0/4)
 
 ```Switch(config)# interface fa0/1
 Switch(config-if)# switchport mode access
@@ -47,4 +47,12 @@ Switch(config-if)# exit
 Switch(config)# interface fa0/4
 Switch(config-if)# switchport mode access
 Switch(config-if)# switchport access vlan 20
+Switch(config-if)# exit```
+
+# 4. Configure Trunk Link to Router
+
+Assume router is connected on fa0/24:
+
+```Switch(config)# interface fa0/24
+Switch(config-if)# switchport mode trunk
 Switch(config-if)# exit```
